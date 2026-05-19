@@ -170,9 +170,11 @@ body {
 
     display: flex;
 
-    flex-direction: column;
+    align-items: center;
 
-    justify-content: center;
+    justify-content: space-between;
+
+    gap: 80px;
 
     background:
         radial-gradient(
@@ -185,6 +187,13 @@ body {
 .hero-content {
 
     max-width: 760px;
+}
+
+.hero-content {
+
+    max-width: 760px;
+
+    flex: 1;
 }
 
 .hero-content h1 {
@@ -351,6 +360,230 @@ body {
 .analytics-button span {
 
     opacity: 0.82;
+}
+
+/* INSTALL BUTTON */
+
+.install-button {
+
+    text-decoration: none;
+
+    flex-shrink: 0;
+}
+
+.install-button-content {
+
+    position: sticky;
+
+    top: 120px;
+
+    width: 380px;
+
+    padding: 34px;
+
+    border-radius: 36px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            160deg,
+            rgba(10,132,255,0.95),
+            rgba(94,92,230,0.95)
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,0.16);
+
+    box-shadow:
+        0 30px 80px
+        rgba(10,132,255,0.34);
+
+    transition:
+        transform 0.28s ease,
+        box-shadow 0.28s ease;
+}
+
+.install-button-content::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(255,255,255,0.22),
+            transparent 42%
+        );
+
+    pointer-events: none;
+}
+
+.install-button:hover
+.install-button-content {
+
+    transform:
+        translateY(-8px)
+        scale(1.02);
+
+    box-shadow:
+        0 40px 100px
+        rgba(10,132,255,0.42);
+}
+
+.install-text {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+.install-label {
+
+    font-size: 12px;
+
+    letter-spacing: 1.6px;
+
+    text-transform: uppercase;
+
+    color:
+        rgba(255,255,255,0.72);
+
+    font-weight: 700;
+}
+
+.install-text strong {
+
+    font-size: 34px;
+
+    line-height: 1.05;
+
+    letter-spacing: -1.8px;
+
+    color: white;
+}
+
+.install-description {
+
+    margin-top: 12px;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+
+    color:
+        rgba(255,255,255,0.82);
+}
+
+.install-meta {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-top: 28px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+.install-chip {
+
+    padding:
+        10px 14px;
+
+    border-radius: 999px;
+
+    background:
+        rgba(255,255,255,0.14);
+
+    border:
+        1px solid
+        rgba(255,255,255,0.12);
+
+    color: white;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    backdrop-filter: blur(20px);
+}
+
+.install-arrow {
+
+    width: 54px;
+
+    height: 54px;
+
+    border-radius: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        rgba(255,255,255,0.16);
+
+    color: white;
+
+    font-size: 28px;
+
+    backdrop-filter: blur(20px);
+}
+
+@media (max-width: 1100px) {
+
+    .hero {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 50px;
+    }
+
+    .install-button {
+
+        width: 100%;
+    }
+
+    .install-button-content {
+
+        width: 100%;
+
+        position: relative;
+
+        top: 0;
+    }
+}
+
+@media (max-width: 640px) {
+
+    .install-text strong {
+
+        font-size: 28px;
+    }
+
+    .install-button-content {
+
+        padding: 28px;
+    }
 }
 
 /* SECTIONS */
